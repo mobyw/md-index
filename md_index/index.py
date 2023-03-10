@@ -6,7 +6,7 @@ folders_ignore = ["docs", "tests", "site", "src", "dist", "build"]
 
 def generate_index(dir: Path, output_dir: Path, depth: int, url_prefix: str):
     """Generate a markdown index for the given directory."""
-    ensure_yml(dir)
+    ensure_yml()
     make_homepage(dir, output_dir, required=True)
     folders = get_folders(dir)
     if depth == 1:
@@ -49,8 +49,8 @@ def make_homepage(dir: Path, output_dir: Path, required=False):
             f.write(f"# File Index\n")
 
 
-def ensure_yml(dir: Path):
-    yml_path = dir / "mkdocs.yml"
+def ensure_yml():
+    yml_path = Path.cwd() / "mkdocs.yml"
     if not yml_path.is_file():
         with open(yml_path, "w", encoding="utf-8") as f:
             f.write("site_name: File Index\n")
