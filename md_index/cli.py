@@ -1,5 +1,7 @@
 from pathlib import Path
+
 import click
+
 from md_index.index import generate_index
 
 
