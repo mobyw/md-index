@@ -1,5 +1,5 @@
-from typing import List
 from pathlib import Path
+from typing import List
 
 
 def generate_index(dir: Path, output_dir: Path):
@@ -32,6 +32,8 @@ def get_folders(dir: Path) -> List[Path]:
 
 def get_file_tree(path: Path, depth: int = -1, tree_str: str = ""):
     if path.is_file():
+        if path.name == "README.md":
+            return tree_str
         path_str = str(path).replace("\\", "/")
         tree_str += "  " * depth + f"- [{path.name}]({path_str})\n"
     elif path.is_dir():
