@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "md-index"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generate markdown index of files in folder for mkdocs."
 authors = ["mobyw <mobyw66@gmail.com>"]
 readme = "README.md"
