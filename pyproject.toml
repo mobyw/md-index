@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "md-index"
 version = "0.1.0"
-description = ""
+description = "Generate markdown index of files in folder for mkdocs."
 authors = ["mobyw <mobyw66@gmail.com>"]
 readme = "README.md"
+license = "MIT"
 packages = [{include = "md_index"}]
 
 [tool.poetry.scripts]
